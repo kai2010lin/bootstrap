@@ -1,0 +1,622 @@
+large screens		(widescreen desktop)
+medium screeens		(old sqaure desktops)
+small screens		(tablets)
+extra small			(smart phone)
+
+class="container"
+class="container-fliud"
+
+by default bootstrap smallest breakpoint rule
+col-lg-1 col-xs-3
+sm and md follow -3 rule 
+
+grid nesting to remove margin at both sides, put your class="col-XX-X" inside of a div of class row
+
+<div class="container"><!--container-fliud gonna occupy the entire screen-->
+    <div class="row">
+        <div class="col-lg-8 bg-success">
+            <p>this is a outer div</p>
+            <div class="row">							//no margin
+                <div class="col-lg-6 bg-warning">
+                    <p>this is inner div</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 bg-success">				//has margin
+            <p>this is a outer div</p>
+            <div class="col-lg-6 bg-warning">
+                <p>this is inner div</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+if child is nested inside of parent without a class row div, then parent and child must have the same break
+point(col-md-XX)
+
+
+//push and pull
+
+<body>
+<div class="container"><!--container-fliud gonna occupy the entire screen-->
+    <div class="row">
+        <div class="col-md-4 col-md-push-4 bg-warning">
+            column 1
+        </div>
+        <div class="col-md-4 col-md-pull-4 bg-success">
+            column 2
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 bg-warning">
+            column 1
+        </div>
+        <div class="col-md-4 bg-success">
+            column 2
+        </div>
+    </div>
+</div>
+<!--useful case:small device still column1 on top of column 2-->
+</body>
+
+
+<div class="container"><!--container-fliud gonna occupy the entire screen-->
+    <div class="row">
+        <div class="col-xs-12 bg-danger">
+            <h1>this is <small>heading</small></h1>
+            <p class="lead">this is leading paragraph</p>
+            <p>this is normal paragraph</p>
+            <p><small>terms and conditions</small></p>
+        </div>
+        <div class="col-xs-12 bg-success">
+            <p>this is <mark>mark tag</mark></p>
+            <p><s>s tag</s></p>
+            <blockquote>A bene placito - At one's pleasure
+
+            A bove majori discit arare minor - The young ox learns to plough from the older
+
+            A capite ad calcem - From head to heel
+
+            A cappella - Vocals only
+
+            A contrario - From a contrary position
+
+            A cruce salus - From the cross comes salvation
+
+            A Deo et Rege - From God and the King
+
+            A fonte puro pura defluit aqua - From a clear spring clear water flows
+            <footer>famous guys</footer>
+            </blockquote>
+            <blockquote class="blockquote-reverse">A bene placito - At one's pleasure
+
+                A bove majori discit arare minor - The young ox learns to plough from the older
+
+                A capite ad calcem - From head to heel
+
+                A cappella - Vocals only
+
+                A contrario - From a contrary position
+
+                A cruce salus - From the cross comes salvation
+
+                A Deo et Rege - From God and the King
+
+                A fonte puro pura defluit aqua - From a clear spring clear water flows
+                <footer>famous guys</footer>
+            </blockquote>
+        </div>
+        <div class="col-xs-12">
+            <p class="text-left">this is class text-left this is class text-left this is class text-left</p>
+            <p class="text-center">this is class text-center this is class text-center this is class text-center</p>
+            <p class="text-right">this is class text-right this is class text-right this is class text-right</p>
+            <p class="text-justify">this is class text-justify this is class text-justify this is class text-justify this is class text-justify this is class text-justify this is class text-justify</p>
+        </div>
+        <div class="col-xs-12">
+            <p class="text-lowercase">THIS IS UPPERCASE</p>
+            <p class="text-uppercase">this is lowercase</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <img class="img-responsive img-rounded" src="img/gQeeAGL.jpg"/></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <img class="img-responsive img-circle" src="img/gQeeAGL.jpg"/></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <img class="img-responsive img-thumbnail" src="img/gQeeAGL.jpg"/></div>
+    </div>
+</div>
+
+//buttons
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <a href="#" class="btn btn-default">click</a>
+            <button class="btn btn-default">click</button>
+            <input class="btn btn-default" type="button" value="click">
+            <input class="btn btn-default" type="submit" value="click">
+            <button class="btn btn-default">click</button>
+            <button class="btn btn-primary">click</button>
+            <button class="btn btn-danger">click</button>
+            <button class="btn btn-success">click</button>
+            <button class="btn btn-warning">click</button>
+            <button class="btn btn-info">click</button>
+            <button class="btn btn-link">click</button>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+            <button class="btn btn-warning">click</button>
+            <button class="btn btn-warning btn-lg">click</button>
+            <button class="btn btn-warning btn-md">click</button>
+            <button class="btn btn-warning btn-sm">click</button>
+            <button class="btn btn-warning btn-xs">click</button>
+        </div>
+		
+//forms
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>basic form</h1>
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input name="email" class="form-control" type="email"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" class="form-control" type="password"/>
+                </div>
+                <div class="form-group">
+                    <label for="file">File</label>
+                    <input name="file" class="form-control" type="file"/>
+                </div>
+                <div>
+                    <input type="submit" value="submit" class="btn btn-success"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+//inline form
+
+<form action="" method="" class="form-inline">
+
+//horizontal form
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>basic form</h1>
+            <form action="" method="" class="form-horizontal">
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label" >Email Address</label>
+                    <div class="col-sm-10">
+                        <input name="email" class="form-control" type="email"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input name="password" class="form-control" type="password"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="file" class="col-sm-2 control-label">File</label>
+                    <div class="col-sm-10" >
+                        <input name="file" class="form-control" type="file"/>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-sm-10 col-sm-push-2" >
+                        <input type="submit" value="submit" class="btn btn-success"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+//list group lec 14
+
+
+<div class="container">
+    <div class="row">   
+        <div class="col-sm-3">
+            <ul class="list-group">
+                <li class="list-group-item active">
+                    <span class="badge">14.99</span>
+                    apple
+                </li>
+                <li class="list-group-item disabled">
+                    <span class="badge">13.99</span>
+                    orange
+                </li>
+                <li class="list-group-item list-group-item-danger">
+                    <span class="badge">12.99</span>
+                    banana
+                </li>
+                <li class="list-group-item list-group-item-warning">
+                    <span class="badge">11.99</span>
+                    pear
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+//jumbotron make something really really big, well is 
+
+<div class="container">
+    <div class="row">   
+        <div class="col-sm-3">
+            <div class="jumbotron">
+                <p>is this big enough</p>
+            </div>
+            <div class="well">
+                <p>this is well</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+//drop down
+
+<div class="col-sm-3">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Message</a></li>s
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+</div>
+
+//navbar tab nav and pill nav 
+
+ul.[nav bav-tabs] = <ul class="" nav="" bav-tabs=""></ul>
+img[src='' alt='fruit'] =====   <img src="" alt="fruit">
+
+//nav-justified nav-stacked
+
+            </div>
+            <ul class="nav nav-tabs nav-justified">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Message</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Message</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+		
+//dropdown inside of a navbar
+
+</div>
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Message</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Message</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Message</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About</a>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Message</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+		
+//nav bar .navbar-fixed-top class
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+//collapse
+
+<div class="container">
+    <div class="row">   
+        <div class="col-xs-12">
+            <button class="btn btn-default" data-toggle="collapse" data-target="#collapse-example">
+                collapse
+            </button>
+            <div id="collapse-example" class="collapse">
+                <div class="well">
+                    Rome was a little quiet town on the shores of the Tiber river when her Latin-speaking citizens learned writing from the Etruscans.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+//modal, nice alert() in javascript
+
+<div class="col-xs-3">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-example">
+                collapse
+            </button>
+            <div id="modal-example" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p>header</p>
+                        </div>
+                        <div class="modal-body">
+                            <p>body</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" type="button" data-dismiss="modal">close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+//slide show
+
+
+
+<div class="container">
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/Nyx.jpg" height="480" width="640"/>
+            </div>
+
+            <div class="item">
+                <img src="img/Grego.jpg" height="480" width="640"/>
+            </div>
+
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+///simple layout
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Jquery/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/Nyx.jpg" height="480" width="640"/>
+                </div>
+
+                <div class="item">
+                    <img src="img/Grego.jpg" height="480" width="640"/>
+                </div>
+
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <section class="col-md-8">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Why do we use it?
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                Where does it come from?
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                Where can I get some?
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+            </section>
+            <aside class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        hero 1
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/Nyx.jpg" height="400" width="300"/>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        hero 2
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/Grego.jpg" height="400" width="300"/>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="col-sm-12">
+            <p class="text-center">&copy; copyright 2016</p>
+        </footer>
+    </div>
+</body>
+</html>
